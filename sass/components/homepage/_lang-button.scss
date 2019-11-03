@@ -1,0 +1,84 @@
+.lang__btn {
+  background-color: $black;
+  color: $white;
+  display: inline-block;
+  font-size: 1.25rem;
+  padding: 10px 15px;
+  text-decoration: none;
+  position: relative;
+
+}
+
+@media (min-width: $breakpoint-laptop) {
+  .lang__btn:hover{
+    background-color: $white;
+    color: $black;
+    font-weight: 700;
+  }
+  
+  .lang__txt {
+    display: block;
+  }
+  
+  .lang__btn::before, .lang__btn::after{
+    background-color: $black;
+    content:"";
+    height: 3px;
+    position: absolute;
+    transition: all 0.2s linear;
+    width: 0;
+  }
+  
+  .lang__txt::before, .lang__txt::after{
+    background-color: $black;
+    content:"";
+    height:0;
+    position: absolute;
+    transition: all 0.2s linear;
+    width: 3px;
+  }
+  
+  .lang__btn:hover::before, .lang__btn:hover::after{
+    width: 100%;
+  }
+  
+  .lang__btn:hover .lang__txt::before, .lang__btn:hover .lang__txt::after{
+    height: 100%;
+  }
+  
+  .lang__btn::before, .lang__btn::after{
+    transition-delay: 0.2s;
+  }
+  
+  .lang__btn .lang__txt::before, .lang__btn .lang__txt::after{
+    transition-delay: 0s;
+  }
+  
+  .lang__btn::before{
+    right: 0;
+    top: 0;
+  }
+  
+  .lang__btn::after{
+    bottom: 0;
+    left: 0;
+  }
+  
+  .lang__btn .lang__txt::before{
+    left: 0;
+    top: 0;
+  }
+  
+  .lang__btn .lang__txt::after{
+    bottom: 0;
+    right: 0;
+  }
+  
+  .lang__btn:hover::before, .lang__btn:hover::after{
+    transition-delay: 0s;
+  }
+  
+  .lang__btn:hover .lang__txt::before, .lang__btn:hover .lang__txt::after{
+    transition-delay: 0.2s;
+  }
+}

@@ -1,0 +1,28 @@
+.titular {
+  margin: 25px 0;
+}
+
+.titular__subtitle {
+  font-size: 1.25rem;
+  text-align: center;
+
+  @media (min-width: 360px) {
+    font-size: 1.375rem;
+  }
+  @media (min-width: $breakpoint-tablet) {
+    text-align: left;
+  }
+}
+
+.titular__title {
+  font-family: $font-titular;
+  font-size: 3.25rem;
+  text-align: center;
+
+  @media (min-width: 360px) {
+    font-size: 3.8rem;
+  }
+  @media (min-width: $breakpoint-tablet) {
+    text-align: left;
+  }
+}
